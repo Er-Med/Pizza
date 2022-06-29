@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--fira sans font  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,700;1,100;1,200;1,300;1,400&display=swap" rel="stylesheet">
+  <!-- style -->
+  <link rel="stylesheet" href="style.css">
+  <!-- font awsome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+  <header>
+    <div class="container">
+        <a href="#" class="logo">
+          <img src="images/logo.png" alt="logo">
+          <h1>Pizza Time</h1>
+        </a>
+        <i class="fa-solid fa-bars" id="menu-bar"></i>
+      <nav class="lg-nav">
+        <ul>
+          <li class="active"><a href="#">home</a></li>
+          <li><a href="#">menu</a></li>
+          <li><a href="#">promo</a></li>
+        </ul>
+        <div>
+          <a href="#"><i class="fa-solid fa-magnifying-glass search" ></i></a>
+          <a href="#" class="cart"><img src="images/cart.png" alt="cart" ></a>
+          <a href="#" class="sign-btn main-btn"> Sign in</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+  <section class="home">
+    <div class="container">
+      <div class="title" id="title">
+        <h1>Friday pizza</h1>
+        <p>time to injoy our delicious pizza.</p>
+        <a href="order-btn" class="main-btn">Oredr Now</a>
+      </div>
+      <div class="image" id="main-image">
+      </div>
+    </div>
+  </section>
+  <section class="recommended">
+    <div class="container">
+      <h2>Recommended menu</h2>
+      <i class="fa-solid fa-arrow-down-long arrow-down"></i>
+      <div class="pizza-menu">
+        <div class="box">
+          <div class="pizza-image">
+            <img src="images/pizza-1.png" alt="">
+          </div>
+          <h3>Cheese Lovers</h3>
+          <p>
+            Combination of Alfredo sauce and two cheeses – Romano, and Parmesan.
+          </p>
+          <span>$20.00</span>
+          <select name="size" id="pizza-size">
+            <option value="regular" selected >regular</option>
+            <option value="medium">medium</option>
+            <option value="big">Big</option>
+          </select>
+          <a href="#" class="main-btn">add to cart</a>
+        </div>
+        <div class="box">
+          <div class="pizza-image">
+            <img src="images/pizza-2.png" alt="">
+          </div>
+          <h3>Pepperoni Pizza </h3>
+          <p>
+            Pizza with homemade spicy beef sausage
+          </p>
+          <span>$25.00</span>
+          <select name="size" id="pizza-size">
+            <option value="regular" selected >regular</option>
+            <option value="medium">medium</option>
+            <option value="big">Big</option>
+          </select>
+          <a href="#" class="main-btn">add to cart</a>
+        </div>
+        <div class="box">
+          <div class="pizza-image">
+            <img src="images/pizza-3.png" alt="">
+          </div>
+          <h3>Margherita Pizza</h3>
+          <p>
+            Made with San Marzano tomatoes, mozzarella cheese, and fresh basil
+          </p>
+          <span>$35.00</span>
+          <select name="size" id="pizza-size">
+            <option value="regular" selected >regular</option>
+            <option value="medium">medium</option>
+            <option value="big">Big</option>
+          </select>
+          <a href="#" class="main-btn">add to cart</a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <script src="script.js"></script>
+</body>
+</html>

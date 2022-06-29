@@ -1,0 +1,329 @@
+:root{
+  --main-color: #00240F;
+  --secondary-color:#EC0000;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  font-family: 'Fira Sans', sans-serif;
+  letter-spacing: 0.5px;
+}
+
+/*strat Globals*/
+a{
+  /* text-transform: none; */
+  text-decoration: none;
+  color: inherit;
+}
+ul{
+  list-style: none;
+}
+.main-btn{
+  width: fit-content;
+  padding: 5px 18px;
+  height: 40px;
+  background-color: var(--secondary-color);
+  color: #fff;
+  border-radius: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-transform: uppercase;
+  transition: opacity 0.3s;
+}
+.main-btn:hover{
+  opacity: 0.8;
+}
+/*end Globals*/
+
+/*sTART CONTAINER */
+.container{
+  max-width: 100%;
+  padding: 0 10px;
+  margin: 0 auto;
+}
+@media(min-width:768px){
+  .container{
+    width: 720px;
+  }
+}
+@media(min-width:992px){
+  .container{
+    width: 960px;
+  }
+}
+@media(min-width:1200px){
+  .container{
+    width: 1140px;
+  }
+}
+/*END CONTAINER */
+
+/* START HEADER */
+header{
+max-height: 100px;
+min-height: 60px;
+height: 100px;
+padding: 15px 0;
+}
+header .container{
+  justify-content: space-between;
+  display: flex;
+  align-items: center;
+}
+header .container .logo{
+  display: flex;
+  align-items: center;
+}
+header .container .logo h1{
+  color: #00240F;
+  font-weight: 600;
+}
+/* THIS CLASS WILL BE added by JS in small WINDOWS */
+.sm-menu-bar{
+  position: absolute;
+  display: flex;
+  align-items: center;
+  background: #fff;
+  top: 70px;
+  width: 95%;
+  right: 10px;
+  flex-direction: column;
+  padding: 10px;
+  border-radius: 5px;
+  gap: 22px;
+  z-index: 50;
+  box-shadow: 1px 1px 9px #c8bcbc inset;
+}
+header .container nav.lg-nav{
+  gap: 24px;  
+  display: none;
+}
+@media(min-width:768px){
+  header .container nav.lg-nav{
+    display: flex;
+    align-items: center;
+  }
+}
+header .container nav  ul{
+  gap: 36px;
+  display: flex;
+  align-items: center;
+}
+header .container nav ul li.active{
+  color: var(--secondary-color);
+}
+header .container nav ul li a{
+  font-style: normal;
+  font-weight: 500;
+  line-height: 19px;
+  transition: .3s;
+}
+header .container nav ul li a:hover{
+  color: var(--secondary-color);
+}
+header .container #menu-bar{
+  display: block;
+  font-size: 24px;
+}
+@media(min-width:768px){
+  header .container #menu-bar{
+    display: none;
+  }
+}
+header .container nav > div{
+  gap: 24px;
+  display: flex;
+  align-items: center;
+}
+header .container nav > div i.search {
+  font-size: 18px;
+}
+header .container nav > div .cart{
+  position: relative;
+}
+header .container nav > div .cart img{
+  width: 30px;
+}
+header .container nav > div .cart::before{
+  content: "";
+  background: #f00;
+  position: absolute;
+  width:7px;
+  height:7px;
+  left: 72.67%;
+  right: 6.67%;
+  top: 20%;
+  bottom: 53.33%;
+  border-radius: 50%;
+}
+/*  END HEADER */
+
+/* START HOME */
+.home{
+  overflow: hidden;
+}
+.home .container{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+@media(max-width:992px){
+  .home .container{
+    flex-direction:column ;
+    gap:30px;
+  }
+}
+.home .container .title{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  transform: translateX(200%);
+  /* transition-delay: 1s; */
+  transition: 1.5s ease;
+}
+@media(max-width:992px){
+  .home .container .title{
+    text-align: center;
+  }
+  .home .container .title .main-btn{
+    margin: auto;
+  }
+}
+.home .container .title h1{
+  font-weight: 700;
+  font-size: 72px;
+  line-height: 74px;
+  font-style: normal;
+  color : #00240F;
+}
+.home .container .title p{
+  font-style: normal;
+  font-weight: 500;
+  font-size: 36px;
+  line-height: 58px;
+}
+.home .container .image{
+    position: relative;
+    background-image: url(images/home-margherita-pizza.png);
+    /* background-color: #EC0000; */
+    width: 50%;
+    height: 450px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    transform: translateX(500%);
+    transition: transform 1.5s;
+}
+@media(max-width:992px){
+  .home .container .image{
+    width:100% ;
+  }
+}
+.home .container .image::before{
+    content: "";
+    position: absolute;
+    width: 100px;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background-image:linear-gradient(to right,
+    #fff,
+    #ffffffe6,
+    #ffffff0d);
+}
+/* END HOME */
+
+
+/* START MENU */
+.recommended{
+  padding: 50px 0;
+}
+.recommended .container{
+  text-align: center;
+}
+.recommended .container h2{
+  text-align: center;
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+.arrow-down{
+  margin-bottom: 30px;
+  font-size: 20px;
+  animation: arrowMove 0.5s infinite alternate-reverse;
+}
+.recommended .container .pizza-menu{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+}
+.recommended .container .pizza-menu .box{
+  text-align: center;
+  width: 280px;
+  padding: 20px 10px;
+  border: 1px solid #BDBDBD;
+  box-shadow: -10px 20px 40px -1px rgba(0, 0, 0, 0.2);
+  border-radius: 180px 180px 30px 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+.recommended .container .pizza-menu .pizza-image{
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  margin: auto;
+  margin-bottom: 15px;
+  transition: transform .3s;
+}
+.pizza-image:hover{
+  transform: rotate(360deg);
+}
+.recommended .container .pizza-menu .pizza-image img{
+max-width: 100%;
+height: auto;
+border-radius: 50%;
+}
+.recommended .container .pizza-menu h3{
+  font-size: 24px;
+  font-weight: 600;
+}
+.recommended .container .pizza-menu p{
+  font-size: 14px;
+  font-weight: 300;
+  font-style: normal;
+  color: #333;
+}
+.recommended .container .pizza-menu span{
+  display: block;
+  font-style: normal;
+  color: #05A84B;
+  font-size: 24px;
+  font-weight: 600;
+}
+.recommended .container .pizza-menu select{
+  width: 243px;
+  padding: 9px 16px;
+  height: 40px;
+  border: 1px solid #4F4F4F;
+  border-radius: 25px;
+}
+.recommended .container .pizza-menu .main-btn{
+  margin: auto;
+  width: 243px;
+}
+/* END MENU */
+
+@keyframes arrowMove  {
+  0%{
+  transform:translatey(0);
+  }
+  100%{
+    transform:translateY(-5px);
+  }
+}
